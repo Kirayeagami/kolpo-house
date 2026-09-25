@@ -2,6 +2,11 @@
 
 An editorial React and Vite website for KOLPO HOUSE, an independent creative studio.
 
+## Links
+
+- **Live website:** [kolpo-house-plum.vercel.app](https://kolpo-house-plum.vercel.app/)
+- **Source repository:** [Kirayeagami/kolpo-house](https://github.com/Kirayeagami/kolpo-house)
+
 ## Development
 
 ```bash
