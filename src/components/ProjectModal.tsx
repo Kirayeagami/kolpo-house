@@ -43,10 +43,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
       role="dialog"
       aria-modal="true"
       aria-labelledby="project-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 lg:p-10 bg-kh-ink/80 backdrop-blur-md animate-fade-in"
+      onClick={onClose}
+      className="kh-popup-backdrop fixed inset-0 z-[80] flex items-end sm:items-center justify-center bg-kh-ink/80 p-0 sm:p-6 lg:p-10"
     >
       <div
-        className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-2xl bg-kh-bg border border-kh-border/40 p-6 sm:p-10 lg:p-12 shadow-2xl space-y-8"
+        className="kh-popup-panel relative w-full max-w-5xl max-h-[94dvh] overflow-y-auto bg-kh-bg border border-kh-border/40 p-5 sm:p-10 lg:p-12 shadow-2xl space-y-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Top Bar */}

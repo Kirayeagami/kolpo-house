@@ -36,10 +36,11 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="legal-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-kh-ink/75 backdrop-blur-sm animate-fade-in"
+      onClick={onClose}
+      className="kh-popup-backdrop fixed inset-0 z-[80] flex items-end sm:items-center justify-center bg-kh-ink/75 p-0 sm:p-8"
     >
       <div
-        className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl bg-kh-bg border border-kh-border/40 p-6 sm:p-10 shadow-2xl space-y-6"
+        className="kh-popup-panel relative w-full max-w-3xl max-h-[94dvh] overflow-y-auto bg-kh-bg border border-kh-border/40 p-5 sm:p-10 shadow-2xl space-y-6"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between border-b border-kh-border/20 pb-4">

@@ -67,13 +67,13 @@ export const Navigation: React.FC<NavigationProps> = ({
   return (
     <>
       <header
-        className={`site-header fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-out px-4 sm:px-8 py-3.5 sm:py-4 border-b ${
+        className={`site-header fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-out px-3 sm:px-8 py-3 sm:py-4 border-b ${
           isScrolled
             ? 'site-header--scrolled bg-kh-bg/90 backdrop-blur-md border-kh-border/20 shadow-xs'
             : 'site-header--hero bg-black/35 backdrop-blur-sm border-white/20'
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Wordmark & Location */}
           <a
             href="#"
@@ -85,7 +85,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                 kh
               </span>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col max-[359px]:hidden">
               <span className="font-display text-lg sm:text-xl tracking-[0.14em] text-kh-ink font-semibold leading-tight group-hover:translate-x-0.5 transition-transform duration-300">
                 {business.name}
               </span>
@@ -114,10 +114,10 @@ export const Navigation: React.FC<NavigationProps> = ({
           </nav>
 
           {/* Right Area: Theme Selector + Call + Contact Action */}
-          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-4 shrink-0">
             {/* Compact Editorial Segmented Theme Control */}
             <div
-              className="flex items-center p-0.5 rounded-full border border-kh-border/30 bg-kh-paper/60 text-[10px] font-mono"
+              className="hidden min-[360px]:flex items-center p-0.5 rounded-full border border-kh-border/30 bg-kh-paper/60 text-[10px] font-mono"
               role="group"
               aria-label="Visual Theme Switcher"
             >
@@ -179,7 +179,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             <button
               type="button"
               onClick={onOpenContact}
-              className="inline-flex items-center gap-1.5 px-3.5 sm:px-5 py-2 text-[10px] sm:text-[11px] tracking-[0.18em] font-semibold uppercase rounded-full border border-kh-ink bg-kh-ink text-kh-bg hover:bg-kh-accent hover:border-kh-accent transition-all duration-300 shadow-xs cursor-pointer group"
+              className="hidden min-[440px]:inline-flex items-center gap-1.5 px-3.5 sm:px-5 py-2 text-[10px] sm:text-[11px] tracking-[0.18em] font-semibold uppercase rounded-full border border-kh-ink bg-kh-ink text-kh-bg hover:bg-kh-accent hover:border-kh-accent transition-all duration-300 shadow-xs cursor-pointer group"
             >
               <span>CONTACT</span>
               <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -189,7 +189,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden relative w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-kh-border/40 hover:border-kh-ink bg-kh-paper/80 backdrop-blur-md flex flex-col items-center justify-center gap-[5px] transition-all duration-300 cursor-pointer shadow-xs"
+              className="lg:hidden relative z-[60] shrink-0 w-10 h-10 rounded-full border border-kh-border/40 hover:border-kh-ink bg-kh-paper/80 backdrop-blur-md flex flex-col items-center justify-center gap-[5px] transition-all duration-300 cursor-pointer shadow-xs"
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -219,7 +219,7 @@ export const Navigation: React.FC<NavigationProps> = ({
           role="dialog"
           aria-modal="true"
           aria-label="Site Navigation Menu"
-          className="fixed inset-0 z-50 flex flex-col justify-between p-5 sm:p-8 bg-kh-bg/98 backdrop-blur-2xl paper-texture overflow-y-auto max-h-[100dvh]"
+          className="fixed inset-0 z-[70] flex flex-col justify-between p-5 sm:p-8 bg-kh-bg/98 backdrop-blur-2xl paper-texture overflow-y-auto max-h-[100dvh]"
         >
           {/* Subtle Background Watermark */}
           <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] text-[35vw] font-display font-bold pointer-events-none select-none">

@@ -182,11 +182,11 @@ export const KolkataStory: React.FC<KolkataStoryProps> = ({ onOpenContact }) => 
           role="dialog"
           aria-modal="true"
           onClick={() => setSelectedImage(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-md animate-fade-in cursor-pointer"
+          className="kh-popup-backdrop fixed inset-0 z-[80] flex items-end sm:items-center justify-center bg-black/90 p-0 sm:p-6 cursor-pointer"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full max-h-[92vh] overflow-y-auto rounded-2xl bg-kh-bg border border-kh-border/40 p-4 sm:p-8 shadow-2xl space-y-6"
+            className="kh-popup-panel relative max-w-4xl w-full max-h-[94dvh] overflow-y-auto bg-kh-bg border border-kh-border/40 p-5 sm:p-8 shadow-2xl space-y-6"
           >
             <div className="flex items-center justify-between border-b border-kh-border/20 pb-4">
               <div className="flex items-center gap-3">

@@ -258,6 +258,46 @@
   animation: menu-slide-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Shared inspection treatment for every popup: a quiet backdrop and a tactile sheet. */
+@keyframes kh-popup-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes kh-popup-panel-in {
+  from { opacity: 0; transform: translateY(1.5rem) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.kh-popup-backdrop {
+  backdrop-filter: blur(14px);
+  animation: kh-popup-backdrop-in .28s ease-out both;
+}
+
+.kh-popup-panel {
+  border-radius: 1.5rem;
+  animation: kh-popup-panel-in .42s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+@media (max-width: 639px) {
+  .kh-popup-panel {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-inline-color: color-mix(in srgb, var(--color-border) 85%, transparent);
+    border-bottom: 0;
+  }
+
+  .kh-popup-panel::before {
+    content: '';
+    display: block;
+    width: 2.75rem;
+    height: .25rem;
+    margin: -.25rem auto 1rem;
+    border-radius: 999px;
+    background: var(--color-border);
+  }
+}
+
 /* Fluid responsive type helpers to prevent mobile layout breakage */
 .responsive-hero-heading {
   font-size: clamp(2.4rem, 9vw, 6.5rem);

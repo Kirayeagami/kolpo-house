@@ -241,11 +241,11 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onOpenContac
           role="dialog"
           aria-modal="true"
           onClick={() => setPreviewImage(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in cursor-pointer"
+          className="kh-popup-backdrop fixed inset-0 z-[80] flex items-end sm:items-center justify-center bg-black/85 p-0 sm:p-4 cursor-pointer"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-md w-full rounded-2xl overflow-hidden shadow-2xl border border-white/20"
+            className="kh-popup-panel relative max-w-md w-full overflow-hidden bg-kh-bg shadow-2xl border border-white/20"
           >
             <img
               src={previewImage}
