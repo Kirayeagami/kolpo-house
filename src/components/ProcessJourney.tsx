@@ -93,7 +93,7 @@ export const ProcessJourney: React.FC = () => {
           </div>
         </div>
 
-        {/* 5 Stage Horizontal Stepper (Item 1) — Complete text without truncation */}
+        {/* 5 Stage selector — uses the same mobile grid treatment as the KOLPO HOUSE Story. */}
         <div
           style={{ transitionDelay: getItemDelay(1, 140) }}
           className={getItemClasses(1)}
@@ -101,7 +101,7 @@ export const ProcessJourney: React.FC = () => {
           <div
             role="tablist"
             aria-label="Process Stages Stepper"
-            className="flex sm:grid sm:grid-cols-5 gap-2 md:gap-2.5 overflow-x-auto no-scrollbar pb-1"
+            className="grid grid-cols-2 md:grid-cols-5 gap-2 sm:gap-2.5"
           >
             {stages.map((st, i) => {
               const isActive = activeStageIndex === i;
@@ -113,8 +113,11 @@ export const ProcessJourney: React.FC = () => {
                   aria-controls={`process-panel-${i}`}
                   aria-selected={isActive}
                   tabIndex={isActive ? 0 : -1}
-                  onClick={() => setActiveStageIndex(i)}
-                  className={`min-w-[140px] sm:min-w-0 flex-1 shrink-0 text-left p-2.5 sm:p-3 rounded-xl border transition-all duration-300 cursor-pointer relative overflow-hidden ${isActive
+                  onClick={() => {
+                    setActiveStageIndex(i);
+                    setIsPaused(true);
+                  }}
+                  className={`${i === stages.length - 1 ? 'col-span-2 md:col-span-1' : ''} text-left p-2.5 sm:p-3.5 rounded-xl border transition-all duration-300 cursor-pointer relative overflow-hidden ${isActive
                     ? 'border-kh-ink bg-kh-surface shadow-xs'
                     : 'border-kh-border/20 bg-kh-paper/40 hover:border-kh-border hover:bg-kh-surface/40'
                     }`}
