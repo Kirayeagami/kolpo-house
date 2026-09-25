@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23161715'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia, serif' font-size='28' font-weight='600' fill='%23F3F1EB'%3EKH%3C/text%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>KOLPO HOUSE — Strategy. Creativity. Content. Growth.</title>
+    <meta name="title" content="KOLPO HOUSE — Strategy. Creativity. Content. Growth." />
+    <meta name="description" content="An independent creative & digital studio in Kolkata. We build brands, not just content. Strategy before execution." />
+    <meta name="theme-color" content="#F3F1EB" />
+    <link rel="canonical" href="https://kolpo-house.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kolpo-house.vercel.app/" />
+    <meta property="og:title" content="KOLPO HOUSE — Strategy. Creativity. Content. Growth." />
+    <meta property="og:description" content="An independent creative & digital studio in Kolkata. We build brands, not just content. Strategy before execution." />
+    <meta property="og:image" content="/assets/kolkata.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="KOLPO HOUSE — Strategy. Creativity. Content. Growth." />
+    <meta property="twitter:description" content="An independent creative & digital studio in Kolkata. We build brands, not just content. Strategy before execution." />
+    <meta property="twitter:image" content="/assets/kolkata.jpg" />
+
+    <!-- Google Fonts: Instrument Serif (Editorial Luxury Serif), Sora (Refined Functional Sans), JetBrains Mono (Technical Metadata) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Anti-flash inline theme loader -->
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('kolpo-theme') || 'system';
+          let active = stored;
+          if (stored === 'system') {
+            active = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', active);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+
+    <!-- Schema.org Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "KOLPO HOUSE",
+      "url": "https://kolpo-house.vercel.app/",
+      "logo": "https://kolpo-house.vercel.app/assets/kolkata.jpg",
+      "description": "Independent Creative & Digital Studio based in Kolkata, India. Specializing in Brand Strategy, Editorial Campaigns, Digital Experiences, and Sustainable Growth.",
+      "email": "kolpohouse@gmail.com",
+      "telephone": "+917003497348",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      },
+      "sameAs": [
+        "https://instagram.com/kolpo.house"
+      ]
+    }
+    </script>
+  </head>
+  <body class="antialiased selection:bg-kh-ink selection:text-kh-bg min-h-screen bg-kh-bg text-kh-ink transition-colors duration-500">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
