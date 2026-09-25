@@ -65,7 +65,7 @@ export const FlyingLetter: React.FC<FlyingLetterProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm select-none overflow-hidden"
+      className="kh-popup-backdrop fixed inset-0 z-[80] flex items-center justify-center p-4 bg-black/60 select-none overflow-hidden"
       role="dialog"
       aria-modal="true"
       aria-label="Dispatching letter to KOLPO HOUSE"
@@ -87,7 +87,7 @@ export const FlyingLetter: React.FC<FlyingLetterProps> = ({
       )}
 
       {/* Main Animation Container */}
-      <div className="relative flex flex-col items-center justify-center max-w-lg w-full">
+      <div className="kh-popup-panel relative flex flex-col items-center justify-center max-w-lg w-full">
         {/* Stage 1 & 2: Folding Letter & Envelope Assembly */}
         <div
           className={`transition-all duration-1000 ease-out ${
