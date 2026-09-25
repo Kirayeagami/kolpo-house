@@ -128,6 +128,21 @@
 .kh-cinematic-hero__detail h2 { margin: .75rem 0 .4rem; font: 400 2rem/.95 "Instrument Serif", Georgia, serif; }
 .kh-cinematic-hero__detail p { margin: 0; font-size: .75rem; line-height: 1.55; }
 .kh-cinematic-hero__detail button { margin-top: 1rem; padding: 0; border: 0; border-bottom: 1px solid currentColor; background: none; color: inherit; font: 500 .58rem/1 "JetBrains Mono", monospace; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; }
+
+/* Studio correspondence: a quiet, tactile contact desk with a one-pass entrance. */
+.kh-contact-experience::before { content: ""; position: absolute; width: 34rem; height: 34rem; right: -15rem; top: 10%; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 15%, transparent), transparent 68%); filter: blur(12px); pointer-events: none; }
+.kh-contact-experience__inner { transition: transform .8s cubic-bezier(.16,1,.3,1), opacity .8s ease; }
+.kh-contact-experience[data-active="false"] .kh-contact-experience__inner { opacity: .7; transform: translateY(1.25rem); }
+.kh-contact-sheet { position: relative; isolation: isolate; overflow: hidden; box-shadow: 0 18px 50px rgba(39,40,35,.08); }
+.kh-contact-sheet::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(120deg, transparent 0%, color-mix(in srgb, var(--color-accent) 6%, transparent) 45%, transparent 72%); transform: translateX(-115%); }
+.kh-contact-experience[data-active="true"] .kh-contact-sheet::before { animation: kh-contact-sheet-sweep 1.25s cubic-bezier(.16,1,.3,1) .2s both; }
+.kh-contact-sheet input, .kh-contact-sheet textarea { outline: none; transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
+.kh-contact-sheet input:focus, .kh-contact-sheet textarea:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 14%, transparent); transform: translateY(-1px); }
+.kh-contact-submit { position: relative; overflow: hidden; }
+.kh-contact-submit::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,.34) 50%, transparent 75%); transform: translateX(-130%); }
+.kh-contact-submit:hover::after, .kh-contact-submit:focus-visible::after { animation: kh-contact-button-shine .7s ease both; }
+@keyframes kh-contact-sheet-sweep { to { transform: translateX(115%); } }
+@keyframes kh-contact-button-shine { to { transform: translateX(130%); } }
 /* The header starts over photography, then changes back to the warm page palette after scrolling. */
 .site-header--hero { color: #fffdf9; }
 .site-header--hero .text-kh-ink, .site-header--hero .text-kh-ink-secondary, .site-header--hero .text-kh-ink-muted { color: #fffdf9 !important; }
@@ -632,6 +647,8 @@
   .flower-decor,
   .typing-cursor,
   .flying-letter-anim,
+  .kh-contact-sheet::before,
+  .kh-contact-submit::after,
   .animate-menu-item {
     animation: none !important;
   }

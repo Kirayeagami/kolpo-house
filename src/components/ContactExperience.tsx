@@ -114,38 +114,39 @@ Sent on ${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short
       ref={ref}
       id="contact"
       aria-label="Chapter: Write to KOLPO HOUSE & Studio Contact"
-      className="scroll-mt-24 sm:scroll-mt-28 py-8 sm:py-12 md:py-16 px-4 sm:px-8 lg:px-12 border-b border-kh-border/20 bg-kh-surface/30 paper-texture relative overflow-hidden"
+      data-active={isInView}
+      className="kh-contact-experience scroll-mt-24 sm:scroll-mt-28 py-10 sm:py-14 md:py-20 px-4 sm:px-8 lg:px-12 border-b border-kh-border/20 bg-kh-surface/30 paper-texture relative overflow-hidden"
     >
       {/* Living Bougainvillea Ambient Accent (ERA-inspired botanical element 07) */}
       <BougainvilleaVideo
         variant="07"
         mode="decorative"
         position="custom"
-        className="-bottom-14 -right-14 sm:-bottom-20 sm:-right-20 w-56 sm:w-72 md:w-80 aspect-square opacity-45 pointer-events-none"
+        className="absolute -bottom-14 -right-14 sm:-bottom-20 sm:-right-20 w-56 sm:w-72 md:w-80 aspect-square opacity-45 pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto space-y-4 sm:space-y-5 relative z-10">
+      <div className="kh-contact-experience__inner max-w-7xl mx-auto space-y-5 sm:space-y-7 relative z-10">
         {/* Header Strip */}
         <div className={`flex flex-col md:flex-row md:items-end justify-between gap-3 pb-3 sm:pb-4 border-b border-kh-border/20 ${getItemClasses(0)}`}>
           <div>
             <div className="editorial-mask">
               <h2 className={`font-display responsive-section-heading text-kh-ink leading-[0.96] tracking-tight editorial-headline-reveal ${isInView ? 'is-revealed' : ''
                 }`}>
-                WRITE TO KOLPO HOUSE. <br />
-                <span className="italic font-light text-kh-accent">Let’s make something meaningful.</span>
+                LET’S MAKE <br />
+                <span className="italic font-light text-kh-accent">SOMETHING MEANINGFUL.</span>
               </h2>
             </div>
           </div>
 
           <div className="max-w-md text-xs sm:text-sm text-kh-ink-secondary leading-relaxed font-light">
-            Every meaningful brand begins with an open, honest letter. Tell us who you are, what you hope to create, and we will answer with care and thoughtful direction.
+            Tell us what you are building. Your note goes directly to our studio, where it is read with care before we reply.
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-6 lg:gap-8 items-start">
           {/* Left: Direct Channels & Studio Coordinates */}
           <div className={`lg:col-span-5 space-y-4 sm:space-y-5 ${getItemClasses(1)}`}>
-            <div className="space-y-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               <span className="text-[10px] font-mono tracking-[0.24em] uppercase text-kh-ink-muted block">
                 DIRECT STUDIO CHANNELS
               </span>
@@ -220,31 +221,8 @@ Sent on ${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short
                 <ArrowUpRight className="w-4 h-4 text-kh-ink-muted group-hover:text-kh-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 
-              {/* Instagram */}
-              <a
-                href={business.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="p-4 sm:p-5 rounded-xl border border-kh-border/30 bg-kh-paper hover:border-kh-ink transition-all duration-300 flex items-center justify-between group shadow-xs"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full border border-kh-border/30 flex items-center justify-center text-kh-ink group-hover:bg-kh-ink group-hover:text-kh-bg transition-colors">
-                    <Instagram className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-[9px] font-mono tracking-widest uppercase text-kh-ink-muted">
-                      INSTAGRAM
-                    </div>
-                    <div className="text-sm sm:text-base font-medium text-kh-ink">
-                      {business.instagramHandle}
-                    </div>
-                  </div>
-                </div>
-                <ArrowUpRight className="w-4 h-4 text-kh-ink-muted group-hover:text-kh-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
-
               {/* Physical Location */}
-              <div className="p-4 sm:p-5 rounded-xl border border-kh-border/20 bg-kh-surface/50 flex items-center gap-4 text-xs font-mono text-kh-ink-secondary">
+              <div className="p-4 sm:p-5 rounded-xl border border-kh-border/20 bg-kh-surface/50 flex items-center gap-4 text-xs font-mono text-kh-ink-secondary sm:col-span-2 lg:col-span-1">
                 <MapPin className="w-4 h-4 text-kh-accent shrink-0" />
                 <div>
                   <span className="text-kh-ink font-medium block">
@@ -254,10 +232,19 @@ Sent on ${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short
                 </div>
               </div>
             </div>
+
+            <a
+              href={business.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-[10px] font-mono tracking-[0.16em] uppercase text-kh-ink-muted hover:text-kh-ink transition-colors"
+            >
+              <Instagram className="w-3.5 h-3.5" /> Follow the studio {business.instagramHandle} <ArrowUpRight className="w-3 h-3" />
+            </a>
           </div>
 
           {/* Right: Client-Side Interactive Letter & Direct Dispatch */}
-          <div className={`lg:col-span-7 p-4 sm:p-6 md:p-8 rounded-2xl border border-kh-border/30 bg-kh-paper shadow-sm ${getItemClasses(2)}`}>
+          <div className={`kh-contact-sheet lg:col-span-7 p-4 sm:p-6 md:p-8 rounded-2xl border border-kh-border/30 bg-kh-paper shadow-sm ${getItemClasses(2)}`}>
             <div className="pb-3 sm:pb-4 border-b border-kh-border/20 mb-4 sm:mb-5">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono tracking-[0.24em] uppercase text-kh-ink-muted">
@@ -363,7 +350,7 @@ Sent on ${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short
                   </span>
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-kh-ink text-kh-bg text-xs font-mono tracking-[0.2em] uppercase hover:bg-kh-accent transition-all duration-300 font-semibold shadow-sm cursor-pointer flex items-center justify-center gap-2 hover:scale-[1.02]"
+                    className="kh-contact-submit w-full sm:w-auto px-8 py-3.5 rounded-full bg-kh-ink text-kh-bg text-xs font-mono tracking-[0.2em] uppercase hover:bg-kh-accent transition-all duration-300 font-semibold shadow-sm cursor-pointer flex items-center justify-center gap-2 hover:scale-[1.02]"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>SEND THE LETTER</span>
