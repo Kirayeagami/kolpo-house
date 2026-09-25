@@ -37,6 +37,19 @@ export const Hero = ({ onOpenContact, isIntroDone = true }: HeroProps) => {
           <button type="button" onClick={onOpenContact}>Start a conversation <ArrowUpRight aria-hidden="true" /></button>
           <a href="#philosophy">Enter the house <ArrowDown aria-hidden="true" /></a>
         </div>
+        <div className="kh-cinematic-hero__mobile-hotspots" aria-label="Studio principles">
+          {business.heroHotspots.map((hotspot, index) => (
+            <button
+              key={hotspot.id}
+              type="button"
+              onClick={() => setActiveHotspot(activeHotspot === index ? null : index)}
+              aria-expanded={visibleHotspot === index}
+              aria-label={`Inspect hotspot ${hotspot.id}: ${hotspot.title}`}
+            >
+              {activeHotspot === index ? <X aria-hidden="true" /> : hotspot.id}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="kh-cinematic-hero__hotspots" aria-label="Studio principles">
