@@ -35,12 +35,13 @@ export const ProcessJourney: React.FC = () => {
       aria-label="Chapter 04: Spatial Methodology (The Process Journey)"
       className="scroll-mt-24 sm:scroll-mt-28 py-8 sm:py-12 md:py-16 px-4 sm:px-8 lg:px-12 border-b border-kh-border/20 bg-kh-bg relative overflow-hidden"
     >
-      {/* Organic Living Bougainvillea Ambient Accent (ERA Variant 05) */}
+      {/* Centred bougainvillea canopy — sized to frame the chapter rather than interrupt it. */}
       <BougainvilleaVideo
         variant="05"
         mode="decorative"
         position="custom"
-        className="-bottom-16 -left-16 sm:-bottom-20 sm:-left-20 w-56 sm:w-80 md:w-96 aspect-square opacity-55 dark:opacity-40 pointer-events-none"
+        parallaxSpeed={0}
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[30rem] sm:w-[38rem] md:w-[46rem] lg:w-[52rem] aspect-square opacity-50 dark:opacity-35 pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto space-y-4 sm:space-y-5 relative z-10">
