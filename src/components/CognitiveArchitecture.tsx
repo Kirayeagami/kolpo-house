@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { business } from '../config/business';
+import { ArrowRight, Compass } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { BougainvilleaVideo } from './BougainvilleaVideo';
 
@@ -54,7 +55,10 @@ export const CognitiveArchitecture: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-4" aria-label={`${activeStep + 1} of ${steps.length} strategic principles`}>
+          <div className="flex items-center gap-4 text-xs font-mono">
+            <span className="text-kh-ink-muted uppercase tracking-widest text-[10px] sm:text-xs">
+              {current.key} FRAMEWORK
+            </span>
             <div className="w-20 sm:w-24 h-[2px] bg-kh-border/20 rounded-full overflow-hidden">
               <div
                 className="h-full bg-kh-ink transition-all duration-300"
@@ -101,6 +105,12 @@ export const CognitiveArchitecture: React.FC = () => {
                     </div>
                   </div>
 
+                  <ArrowRight
+                    className={`w-3.5 h-3.5 hidden lg:block transition-transform duration-300 shrink-0 ${isSelected
+                      ? 'text-kh-ink translate-x-0.5'
+                      : 'text-kh-ink-muted opacity-30'
+                      }`}
+                  />
                 </button>
               );
             })}
@@ -119,6 +129,11 @@ export const CognitiveArchitecture: React.FC = () => {
               className="h-auto p-5 sm:p-7 md:p-8 rounded-2xl border border-kh-border/30 bg-kh-paper flex flex-col space-y-4 sm:space-y-5 transition-all duration-300 ease-out"
             >
               <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center justify-between text-[10px] font-mono tracking-[0.24em] text-kh-ink-muted uppercase pb-2 sm:pb-2.5 border-b border-kh-border/20">
+                  <span>{current.key} FRAMEWORK</span>
+                  <span>KOLKATA, INDIA</span>
+                </div>
+
                 <div className="text-[10px] sm:text-xs font-mono tracking-widest uppercase text-kh-accent font-semibold">
                   {current.subtitle}
                 </div>
@@ -134,6 +149,21 @@ export const CognitiveArchitecture: React.FC = () => {
                 </p>
               </div>
 
+              <div className="pt-3.5 sm:pt-4 border-t border-kh-border/20 flex items-center justify-between text-xs font-mono">
+                <div className="flex items-center gap-2 text-kh-ink">
+                  <Compass className="w-4 h-4 text-kh-accent shrink-0" />
+                  <span className="text-[11px] sm:text-xs">
+                    Discipline Status:{' '}
+                    <span className="font-semibold uppercase text-kh-ink">
+                      {current.status}
+                    </span>
+                  </span>
+                </div>
+
+                <span className="text-[9px] tracking-widest uppercase text-kh-ink-muted hidden sm:inline-block">
+                  KOLPO HOUSE METHOD
+                </span>
+              </div>
             </div>
           </div>
         </div>
