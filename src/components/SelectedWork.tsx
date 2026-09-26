@@ -31,7 +31,7 @@ export const SelectedWork: React.FC<SelectedWorkProps> = ({ onSelectProject }) =
         variant="06"
         mode="decorative"
         position="custom"
-        className="-bottom-12 -right-12 sm:-bottom-16 sm:-right-16 w-56 sm:w-72 md:w-80 aspect-square opacity-50 pointer-events-none"
+        className="-bottom-12 -right-12 sm:-bottom-16 sm:-right-16 w-72 sm:w-96 md:w-[28rem] aspect-square opacity-65 pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto space-y-4 sm:space-y-5 relative z-10">

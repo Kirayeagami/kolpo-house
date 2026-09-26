@@ -73,7 +73,7 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onOpenContac
         variant="04"
         mode="decorative"
         position="top-left"
-        className="opacity-65 dark:opacity-50"
+        className="w-72 sm:w-96 md:w-[28rem] opacity-65 dark:opacity-50"
       />
 
       <div className="max-w-7xl mx-auto space-y-4 sm:space-y-5 relative z-10">

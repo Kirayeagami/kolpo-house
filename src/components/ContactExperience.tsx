@@ -122,7 +122,7 @@ Sent on ${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short
         variant="07"
         mode="decorative"
         position="custom"
-        className="absolute -bottom-14 -right-14 sm:-bottom-20 sm:-right-20 w-56 sm:w-72 md:w-80 aspect-square opacity-45 pointer-events-none"
+        className="absolute -bottom-14 -right-14 sm:-bottom-20 sm:-right-20 w-72 sm:w-96 md:w-[28rem] aspect-square opacity-60 pointer-events-none"
       />
 
       <div className="kh-contact-experience__inner max-w-7xl mx-auto space-y-5 sm:space-y-7 relative z-10">

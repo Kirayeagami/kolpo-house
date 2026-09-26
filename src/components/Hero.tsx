@@ -17,7 +17,7 @@ export const Hero = ({ onOpenContact, isIntroDone = true }: HeroProps) => {
     <section aria-label="KOLPO HOUSE Prologue & Architectural Hero" className={`kh-cinematic-hero ${isIntroDone ? 'kh-cinematic-hero--ready' : ''}`}>
       <img src="/assets/kolkata.jpg" alt="KOLPO HOUSE Kolkata Architecture and Creative Atmosphere" className="kh-cinematic-hero__image" />
       <div className="kh-cinematic-hero__veil" />
-      <BougainvilleaVideo variant="01" mode="decorative" position="custom" className="absolute -left-4 top-4 z-5 w-56 opacity-50 pointer-events-none sm:w-80 lg:w-96" />
+      <BougainvilleaVideo variant="01" mode="decorative" position="custom" className="absolute -left-4 top-4 z-5 w-64 opacity-70 pointer-events-none sm:w-96 lg:w-[32rem]" />
 
       <div className="kh-cinematic-hero__topline">
         <span><i /> {business.descriptor}</span>

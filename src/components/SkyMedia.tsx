@@ -125,7 +125,7 @@ export const SkyMedia: React.FC<SkyMediaProps> = ({
               variant={flowerVariant}
               mode="decorative"
               position="custom"
-              className="-top-14 -left-14 sm:-top-20 sm:-right-20 w-56 sm:w-80 md:w-96 aspect-square opacity-75 sm:opacity-85 pointer-events-none"
+              className="-top-14 -left-14 sm:-top-20 sm:-right-20 w-72 sm:w-96 md:w-[30rem] aspect-square opacity-85 sm:opacity-90 pointer-events-none"
             />
           )}
 

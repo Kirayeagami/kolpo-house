@@ -33,7 +33,7 @@ export const CognitiveArchitecture: React.FC = () => {
         variant="03"
         mode="decorative"
         position="custom"
-        className="-bottom-14 -left-12 sm:-bottom-20 sm:-left-16 w-56 sm:w-72 md:w-96 aspect-square opacity-45 pointer-events-none"
+        className="-bottom-14 -left-12 sm:-bottom-20 sm:-left-16 w-64 sm:w-80 md:w-[28rem] aspect-square opacity-55 pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto space-y-4 sm:space-y-5 relative z-10">
