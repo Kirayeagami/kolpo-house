@@ -55,10 +55,7 @@ export const CognitiveArchitecture: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-4 text-xs font-mono">
-            <span className="text-kh-ink-muted uppercase tracking-widest text-[10px] sm:text-xs">
-              {current.key} FRAMEWORK
-            </span>
+          <div className="flex items-center gap-4" aria-label={`${activeStep + 1} of ${steps.length} strategic principles`}>
             <div className="w-20 sm:w-24 h-[2px] bg-kh-border/20 rounded-full overflow-hidden">
               <div
                 className="h-full bg-kh-ink transition-all duration-300"
@@ -129,11 +126,6 @@ export const CognitiveArchitecture: React.FC = () => {
               className="h-auto p-5 sm:p-7 md:p-8 rounded-2xl border border-kh-border/30 bg-kh-paper flex flex-col space-y-4 sm:space-y-5 transition-all duration-300 ease-out"
             >
               <div className="space-y-3 sm:space-y-4">
-                <div className="flex items-center justify-between text-[10px] font-mono tracking-[0.24em] text-kh-ink-muted uppercase pb-2 sm:pb-2.5 border-b border-kh-border/20">
-                  <span>{current.key} FRAMEWORK</span>
-                  <span>KOLKATA, INDIA</span>
-                </div>
-
                 <div className="text-[10px] sm:text-xs font-mono tracking-widest uppercase text-kh-accent font-semibold">
                   {current.subtitle}
                 </div>

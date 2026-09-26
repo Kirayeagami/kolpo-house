@@ -133,7 +133,6 @@ export const VisualWorlds: React.FC<VisualWorldsProps> = ({ onOpenContact }) => 
             <div className="space-y-2.5 sm:space-y-3">
               <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.24em] text-kh-ink-muted uppercase pb-2 border-b border-kh-border/20">
                 <span>{current.name}</span>
-                <span>ATMOSPHERIC DOMAIN</span>
               </div>
 
               <div className="editorial-mask">
@@ -202,7 +201,6 @@ export const VisualWorlds: React.FC<VisualWorldsProps> = ({ onOpenContact }) => 
 
             <div className="absolute top-4 left-5 right-5 flex items-center justify-between text-[9px] font-mono tracking-widest uppercase text-white/80 z-10">
               <span>KOLPO HOUSE / {current.name}</span>
-              <span>ATMOSPHERIC DOMAIN</span>
             </div>
 
             <div className="my-auto z-10 px-6 py-8 text-white space-y-2">
